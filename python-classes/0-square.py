@@ -1,9 +1,7 @@
-#!/usr/bin/python3
-"""
-Defines a new empty class square
-"""
+#!/usr/bin/pythonm
+"""Defines a new empty class square"""
 
 
-class Square:
+class Square(object):
     """Just an empty class named square"""
     pass
