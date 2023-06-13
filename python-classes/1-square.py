@@ -10,4 +10,4 @@ class Square:
         Atributtes:
             size: Square size.
         """
-        self.__size = size
+    self.__size = size
