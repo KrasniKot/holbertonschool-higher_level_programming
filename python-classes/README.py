@@ -1,1 +1,1 @@
-python clases
+python clases and objects
