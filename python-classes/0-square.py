@@ -2,6 +2,6 @@
 """Defines a new empty class square"""
 
 
-class Square(object):
+class Square:
     """Just an empty class named square"""
     pass
