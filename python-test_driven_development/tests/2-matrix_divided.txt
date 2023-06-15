@@ -20,6 +20,16 @@ STRING DIV:
 	Traceback (most recent call last):
 	TypeError: div must be a number
 
+INDETERMINATED DIV:
+	>>> matrix_divided(any_matrix, float("nan"))
+	Traceback (most recent call last):
+	TypeError: div must be a number
+
+INFINITE DIV:
+        >>> matrix_divided(any_matrix, float("nan"))
+        Traceback (most recent call last):
+        TypeError: div must be a number
+
 STRING ELEMENT:
 	>>> matrix_divided([[1, 2, 3], [4, "five", 6]], 2)
 	Traceback (most recent call last):
