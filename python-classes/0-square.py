@@ -1,4 +1,4 @@
-#!/usr/bin/pythonm
+#!/usr/bin/python3
 """Defines a new empty class square"""
 
 
