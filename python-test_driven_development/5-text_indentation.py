@@ -1,7 +1,12 @@
 #!/usr/bin/python3
+"""prints a formatted text"""
+
+
 def text_indentation(text):
+    """prints a formatted text"""
     if type(text) != str:
         raise TypeError("text must be a string")
+
     signs = [".", "?", ":"]
     char = 0
 
