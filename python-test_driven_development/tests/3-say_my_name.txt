@@ -18,3 +18,12 @@ NONE AS FIRST ARGUMENT:
 	>>> say(None, "Jhon")
 	Traceback (most recent call last):
 	TypeError: first_name must be a string
+
+NONE AS SECOND ARGUMENT:
+	>>> say("Jhon", None)
+	Traceback (most recent call last):
+        TypeError: last_name must be a string
+
+EMPTY STRINGS:
+	>>> say("", "")
+	My name is  
