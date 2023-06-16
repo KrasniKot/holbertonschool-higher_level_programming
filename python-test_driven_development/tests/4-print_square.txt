@@ -1,0 +1,28 @@
+>>> square = __import__('4-print_square').print_square
+
+INTEGER ARGUMENT:
+	>>> square(4)
+	####
+	####
+	####
+	####
+
+STRING ARGUMENT:
+	>>> square("four")
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+NEGATIVE VALUE:
+	>>> square(-1)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+INDETERMINATE:
+	>>> square(float("nan"))
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+NO ARGUMENT:
+	>>> square()
+    	Traceback (most recent call last):
+	TypeError: print_square() missing 1 required positional argument: 'size'
