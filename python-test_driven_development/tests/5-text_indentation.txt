@@ -1,0 +1,21 @@
+>>> text = __import__('5-text_indentation').text_indentation
+
+STRING ARGUMENT:
+	>>> text("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+	... Quonam modo""")
+    	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    	<BLANKLINE>
+   	Quonam modo
+
+EMPTY STRING:
+	>>> text("")
+
+INT ARGUMENT:
+	>>> text(7)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+NO ARGUMENT:
+	>>> text()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
