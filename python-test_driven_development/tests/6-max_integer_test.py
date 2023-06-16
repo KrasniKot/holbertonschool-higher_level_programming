@@ -4,6 +4,7 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     """Testing max_integer()"""
 
@@ -17,8 +18,10 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_CorrectType(self):
         """Checks for a TypeError to be raised"""
-        self.assertRaises(max_integer(["five", 9, 17, 14]), TypeError)
-        self.assertRaises(max_integer([4, None, 19, 1]), TypeError)
+        with self.assertRaises(TypeError):
+            max_integer(["five", 9, 17, 14])
+        with self.assertRaises(TypeError):
+            max_integer([4, None, 19, 1])
 
     def test_EmptyList(self):
         """Checks for the return value to be correct (None)"""
