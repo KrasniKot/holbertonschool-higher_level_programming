@@ -15,6 +15,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([4.5, 1, 9.2, 9.1]), 9.2)
         self.assertEqual(max_integer(["a", "b", "c"]), "c")
         self.assertEqual(max_integer([20, float("Inf")]), float("inf"))
+        self.assertEqual(max_integer([1]), 1)
 
     def test_CorrectType(self):
         """Checks for a TypeError to be raised"""
@@ -26,3 +27,6 @@ class TestMaxInteger(unittest.TestCase):
     def test_EmptyList(self):
         """Checks for the return value to be correct (None)"""
         self.assertEqual(max_integer([]), None)
+
+if __name__ == "__main_":
+    unittest.main()
