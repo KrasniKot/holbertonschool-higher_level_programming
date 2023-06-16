@@ -1,0 +1,20 @@
+>>> say = __import__('3-say_my_name').say_my_name
+
+SRTING ARGUMENTS PASSED:
+	>>> say("Jhon", "Smith")
+	My name is Jhon Smith
+
+INT AS FIRST ARGUMENT:
+	>>> say(1, "Jhon")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+INT AS SECOND ARGUMENT:
+	>>> say("Jhon", 1)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+NONE AS FIRST ARGUMENT:
+	>>> say(None, "Jhon")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
