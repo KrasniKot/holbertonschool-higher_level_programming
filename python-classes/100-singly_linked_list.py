@@ -75,4 +75,4 @@ class SinglyLinkedList:
             sllstr += str(idxr.data) + "\n"
             idxr = idxr.next_node
 
-        return sllstr
+        return sllstr[:-1]
