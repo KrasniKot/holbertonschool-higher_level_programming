@@ -69,7 +69,7 @@ class Square:
                 sqstr += "\n"
             for i in range(self.__size):
                 for k in range(self.__position[0]):
-                    sqstr += ""
+                    sqstr += " "
                 for j in range(self.__size):
                     sqstr += "#"
                 sqstr += "\n"
