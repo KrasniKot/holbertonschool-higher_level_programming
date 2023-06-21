@@ -6,7 +6,6 @@ class MyList(list):
     """
     MyList class definition
     """
-
     def print_sorted(self):
         """
         Prints the list sorted in ascending order
