@@ -1,0 +1,24 @@
+>>> ml = __import__('1-my_list').MyList
+
+ORDERED LIST PASSED:
+    >>> mlist = ml()
+    >>> mlist.append(1)
+    >>> mlist.append(2)
+    >>> mlist.append(3)
+    >>> mlist.append(4)
+    >>> mlist.print_sorted()
+    [1, 2, 3, 4]
+
+UNORDERED LIST PASSED:
+    >>> mlst = ml()
+    >>> mlst.append(9)
+    >>> mlst.append(1)
+    >>> mlst.append(2)
+    >>> mlst.append(4)
+    >>> mlst.print_sorted()
+    [1, 2, 4, 9]
+
+EMPTY LIST PASSED:
+    >>> mlt = ml()
+    >>> mlt.print_sorted()
+    []
