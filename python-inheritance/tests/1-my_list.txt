@@ -18,12 +18,26 @@ UNORDERED LIST PASSED:
     >>> mlst.print_sorted()
     [1, 2, 4, 9]
 
+NEGATIVE ARGUMENTS:
+    >>> mlist = ml()
+    >>> mlist.append(-1)
+    >>> mlist.append(-12)
+    >>> mlist.append(-2)
+    >>> mlist.print_sorted()
+    [-12, -2, -1]
+
+ONE ARGUMENT:
+    >>> mlist = ml()
+    >>> mlist.append(3)
+    >>> mlist.print_sorted()
+    [3]
+
 EMPTY LIST PASSED:
     >>> mlt = ml()
     >>> mlt.print_sorted()
     []
 
-NO INT ARGUMENT:
+STRING ARGUMENTS:
     >>> mlist = ml("adskj")
     >>> mlist.print_sorted()
     ['a', 'd', 'j', 'k', 's']
