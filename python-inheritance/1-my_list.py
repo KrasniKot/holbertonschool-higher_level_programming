@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module which contains MyList class"""
+"""Contains MyList class"""
 
 
 class MyList(list):
@@ -9,6 +9,6 @@ class MyList(list):
 
     def print_sorted(self):
         """
-        prints the list sorted in ascending order
+        Prints the list sorted in ascending order
         """
         print(sorted(self))
