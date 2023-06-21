@@ -46,3 +46,11 @@ NONE ARGUMENT:
     >>> mlistt = ml(None)
     Traceback (most recent call last):
     TypeError: 'NoneType' object is not iterable
+
+INF ARGUMENT:
+    >>> mlist = ml()
+    >>> mlist.append(1)
+    >>> mlist.append(float("inf"))
+    >>> mlist.append(9)
+    >>> mlist.print_sorted()
+    [1, 9, inf]
