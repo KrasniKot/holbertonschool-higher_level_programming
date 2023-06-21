@@ -3,7 +3,8 @@
 
 
 class MyList(list):
-    """MyList class"""
+    """MyList class definition"""
+
     def print_sorted(self):
         """prints the list sorted"""
         print(sorted(self))
