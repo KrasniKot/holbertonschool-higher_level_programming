@@ -22,3 +22,13 @@ EMPTY LIST PASSED:
     >>> mlt = ml()
     >>> mlt.print_sorted()
     []
+
+NO INT ARGUMENT:
+    >>> mlist = ml("adskj")
+    >>> mlist.print_sorted()
+    ['a', 'd', 'j', 'k', 's']
+
+NONE ARGUMENT:
+    >>> mlistt = ml(None)
+    Traceback (most recent call last):
+    TypeError: 'NoneType' object is not iterable
