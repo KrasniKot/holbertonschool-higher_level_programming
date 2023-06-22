@@ -23,7 +23,7 @@ INTEGER NAME AND INTEGER VALUE:
 	>>> ba = batry()
 	>>> ba.integer_validator(1, 1)
 
-WRONG TYPE ARGUMENT:
+STIRNG ARGUMENT:
 	>>> ba = batry()
 	>>> ba.integer_validator("something", "something2")
 	Traceback (most recent call last):
