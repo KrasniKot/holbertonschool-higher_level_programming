@@ -1,0 +1,23 @@
+>>> batry = __import__('7-base_geometry').BaseGeometry
+
+CALLING area():
+	>>> ba = batry()
+	>>> ba.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+CALLING integer_vaidator():
+	>>> ba = batry()
+	>>> ba.integer_validator("something", 9)
+
+integer_validator WRONG TYPE ARGUMENT:
+	>>> ba = batry()
+	>>> ba.integer_validator("something", "something2")
+	Traceback (most recent call last):
+	TypeError: something must be an integer
+
+integer_validator WRONG VALUE ARGUMENT:
+	>>> ba = batry()
+	>>> ba.integer_validator("something", -400)
+	Traceback (most recent call last):
+	ValueError: something must be greater than 0
