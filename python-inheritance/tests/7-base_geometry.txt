@@ -1,23 +1,57 @@
 >>> batry = __import__('7-base_geometry').BaseGeometry
 
+
 CALLING area():
 	>>> ba = batry()
 	>>> ba.area()
 	Traceback (most recent call last):
 	Exception: area() is not implemented
 
-CALLING integer_vaidator():
+______________________________________________________________
+integer_validator():
+
+integer_vaidator():
 	>>> ba = batry()
 	>>> ba.integer_validator("something", 9)
 
-integer_validator WRONG TYPE ARGUMENT:
+WRONG TYPE ARGUMENT:
 	>>> ba = batry()
 	>>> ba.integer_validator("something", "something2")
 	Traceback (most recent call last):
 	TypeError: something must be an integer
 
-integer_validator WRONG VALUE ARGUMENT:
+NEGATIVE ARGUMENT:
 	>>> ba = batry()
 	>>> ba.integer_validator("something", -400)
 	Traceback (most recent call last):
 	ValueError: something must be greater than 0
+
+ZERO ARGUMENT:
+	>>> ba = batry()
+	>>> ba.integer_validator("something", 0)
+	Traceback (most recent call last):
+	ValueError: something must be greater than 0
+
+INFINITY ARGUMENT:
+	>>> ba = batry()
+	>>> ba.integer_validator("something", float("nan"))
+        Traceback (most recent call last):
+        TypeError: something must be an integer
+
+INTDETERMINATE ARGUMENT:
+        >>> ba = batry()
+        >>> ba.integer_validator("something", float("inf"))
+        Traceback (most recent call last):
+        TypeError: something must be an integer
+
+NONE ARGUMENT:
+        >>> ba = batry()
+        >>> ba.integer_validator("something", None)
+        Traceback (most recent call last):
+        TypeError: something must be an integer
+
+NO ARGUMENT:
+        >>> ba = batry()
+        >>> ba.integer_validator()
+        Traceback (most recent call last):
+        TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
