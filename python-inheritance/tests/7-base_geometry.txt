@@ -7,8 +7,9 @@ CALLING area():
 	Traceback (most recent call last):
 	Exception: area() is not implemented
 
-______________________________________________________________
-integer_validator():
+
+
+integer_validator() TESTING:
 
 STRING NAME, INTEGER VALUE:
 	>>> ba = batry()
@@ -40,6 +41,42 @@ ZERO ARGUMENT:
 	Traceback (most recent call last):
 	ValueError: something must be greater than 0
 
+BOOL ARGUMENT:
+        >>> ba = batry()
+        >>> ba.integer_validator("something", True)
+        Traceback (most recent call last):
+        TypeError: something must be an integer
+
+TUPLE ARGUMENT:
+        >>> ba = batry()
+        >>> ba.integer_validator("something", (1, ))
+        Traceback (most recent call last):
+        TypeError: something must be an integer
+
+LIST ARGUMENT:
+        >>> ba = batry()
+        >>> ba.integer_validator("something", [1, ])
+        Traceback (most recent call last):
+        TypeError: something must be an integer
+
+FLOAT ARGUMENT:
+        >>> ba = batry()
+        >>> ba.integer_validator("something", 1.1)
+        Traceback (most recent call last):
+        TypeError: something must be an integer
+
+SET ARGUMENT
+        >>> ba = batry()
+        >>> ba.integer_validator("something", {1, })
+        Traceback (most recent call last):
+        TypeError: something must be an integer
+
+COMPLEX ARGUMENT:
+        >>> ba = batry()
+        >>> ba.integer_validator("something", 6j)
+        Traceback (most recent call last):
+        TypeError: something must be an integer
+
 INFINITY ARGUMENT:
 	>>> ba = batry()
 	>>> ba.integer_validator("something", float("nan"))
@@ -70,3 +107,8 @@ NO ARGUMENTS PASSED:
         Traceback (most recent call last):
         TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
+THRE ARGUMENTS PASSED:
+	>>> ba = batry()
+        >>> ba.integer_validator("something", 21, "third")
+        Traceback (most recent call last):
+	TypeError: integer_validator() takes 3 positional arguments but 4 were given
