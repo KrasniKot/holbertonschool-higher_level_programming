@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Contains the function read_file()"""
+"""Contains read_file()"""
 
 
 def read_file(filename=""):
-    """Reads a file and prints it to the stdout"""
-    with open("my_file_0.txt", encoding=i"UTF8") as f:
-        for line in f.read():
+    """Reads a flie and prints it to the stdout"""
+    with open(filename, encoding="utf-8") as f:
+        for line in f:
             print(f"{line}", end="")
