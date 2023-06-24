@@ -5,7 +5,10 @@
 def pascal_triangle(n):
     """Returns a list of lists representing the Pascal's triangle"""
     tri = []
-    if n > 0:
-        for i in range(n):
-            tri += [list(str(11**i))]
+    for i in range(n):
+        row = [1]
+        if i > 0:
+            for j in range(i):
+                row.append(sum(tri[-1][j:j + 2]))
+        tri.append(row)
     return tri
