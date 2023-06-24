@@ -14,7 +14,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """Returns the dictionary representation of Student"""
-        if attrs:
+        if attrs is not None:
             new_attrs = {}
             for at in attrs:
                 if at in self.__dict__:
