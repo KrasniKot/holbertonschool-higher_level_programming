@@ -19,5 +19,7 @@ class Student:
             for at in attrs:
                 if at in self.__dict__:
                     new_attrs[at] = self.__dict__[at]
+                    if new_attrs is AttributeError:
+                        continue
             return new_attrs
         return self.__dict__
