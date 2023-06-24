@@ -5,7 +5,7 @@
 def pascal_triangle(n):
     """Returns a list of lists representing the Pascal's triangle"""
     if n <= 0:
-        return [[]]
+        return []
     tri = []
     for i in range(n):
         tri += [list(str(11**i))]
