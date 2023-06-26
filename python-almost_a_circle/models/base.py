@@ -4,6 +4,7 @@
 
 class Base:
     """
+    Defines a Base
     """
     __nb_objects = 0
 
