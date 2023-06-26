@@ -9,7 +9,7 @@ class Rectangle(Base):
         """Initializes a rectangle"""
         super().__init__(id)
         self.__width = width
-        self.height = height
+        self.__height = height
         self.__x = x
         self.__y = y
 
