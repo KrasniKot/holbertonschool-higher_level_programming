@@ -84,6 +84,13 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
+    def update(self, *args):
+        """Assigns an argument to each attribute"""
+        atttset = ["id", "width", "height", "x", "y"]
+
+        for idx, arg in enumerate(args):
+            setattr(self, atttset[idx], arg)
+
     def __str__(self):
         """Override the str method"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} \
