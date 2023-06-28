@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+"""Co"Contains Square class"""
 from models.rectangle import Rectangle
-"""Contains class Square"""
 
 
 class Square(Rectangle):
@@ -10,7 +10,7 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """Overrides the inherited the method"""
+        """Overrides the inherited str method"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     @property
