@@ -84,12 +84,17 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assigns an argument to each attribute"""
         atttset = ["id", "width", "height", "x", "y"]
 
-        for idx, arg in enumerate(args):
-            setattr(self, atttset[idx], arg)
+        if args:
+            for idx, arg in enumerate(args):
+                setattr(self, atttset[idx], arg)
+
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def __str__(self):
         """Override the str method"""
