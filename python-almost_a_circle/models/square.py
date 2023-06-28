@@ -12,3 +12,14 @@ class Square(Rectangle):
     def __str__(self):
         """Overrides the inherited __str__ method"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+
+    @property
+    def size(self):
+        """size getter method"""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """size setter method"""
+        self.width = value
+        self.height = value
