@@ -98,18 +98,18 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """
-        Return the dictionary
+        Returns the dictionary
         representation of a Rectangle
         """
         return self.__dict__
 
     def __str__(self):
-        """Override the str method"""
+        """Overrides the str method"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} \
 - {self.width}/{self.height}"
 
     def to_dictionary(self):
-        """Return a dictionary reresentation of a Rectangle"""
+        """Returns a dictionary reresentation of a Rectangle"""
         new_dict = {}
 
         for key, value in self.__dict__.items():
