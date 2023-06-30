@@ -27,9 +27,9 @@ class Base:
     def save_to_file(cls, list_objs):
         """Returns the JSON representation of an instance"""
         inlistdict = []
-
-        for instance in list_objs:
-            inlistdict.append(instance.to_dictionary())
+        if type(list_objs) != None:
+            for instance in list_objs:
+                inlistdict.append(instance.to_dictionary())
 
         with open(str(cls.__name__) + ".json", "w", encoding="utf8") as f:
             f.write(cls.to_json_string(inlistdict))
