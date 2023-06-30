@@ -27,7 +27,8 @@ class Base:
     def save_to_file(cls, list_objs):
         """Returns the JSON representation of an instance"""
         inlistdict = []
-        if type(list_objs) != None:
+
+        if list_objs is not None:
             for instance in list_objs:
                 inlistdict.append(instance.to_dictionary())
 
