@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Contains the class Base"""
 import json
+import os
 
 
 class Base:
@@ -51,3 +52,19 @@ class Base:
             inst = cls(1)
         inst.update(**dictionary)
         return inst
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances"""
+        instlist = []
+        ftlf = str(cls.__name__) + ".json"
+
+        if os.path.isfile(ftlf):
+            with open(ftlf, "r", encoding="utf-8") as f:
+                cntt = cls.from_json_string(f.read())
+
+                for instdict in cntt:
+                    inst = cls.create(**instdict)
+                    instlist.append(inst)
+
+        return instlist
