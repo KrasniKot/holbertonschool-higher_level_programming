@@ -27,6 +27,8 @@ class TestBase(unittest.TestCase):
         self.assertEqual(Base.to_json_string([{"id": 9}]), '[{"id": 9}]')
         self.assertEqual(Base.to_json_string([None]), "[null]")
         self.assertEqual(Base.to_json_string([]), "[]")
+        self.assertEqual(Base.to_json_string([True]), "[true]")
+        self.assertEqual(Base.to_json_string([False]), "[false]")
 
     def test_save_and_load(self):
         """Test for save to file"""
@@ -59,6 +61,9 @@ class TestBase(unittest.TestCase):
             [{"height": 27, "id": 9}])
         self.assertEqual(Base.from_json_string(None), [])
         self.assertEqual(Base.from_json_string('[]'), [])
+
+        Shape = Base.load_from_file()
+        self.assertEqual(Base.save_to_file(Shape), None)
 
 
 if __name__ == "__main__":
