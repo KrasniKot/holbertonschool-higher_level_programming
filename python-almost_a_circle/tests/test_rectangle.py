@@ -26,6 +26,7 @@ class TestRectangle(unittest.TestCase):
         self.rectangle1.display()
         outt = outt.getvalue()
         self.assertEqual(outt, "####\n")
+        sys.stdout = sys.__stdout__
 
         outt = StringIO()
         sys.stdout = outt
@@ -34,17 +35,18 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(
                 outt,
                 "\n      ###\n      ###\n      ###\n      ###\n      ###\n")
+        sys.stdout = sys.__stdout__
 
     def test_update_print(self):
         """Test update() and __str__()"""
         self.rectangle1.update(1, 1, 1, 1, id="another id")
-        outt = StringIO()
-        sys.stdout = outt
-        print(self.rectangle1)
-        outt = outt.getvalue()
-        self.assertEqual(
-                outt,
-                "[Rectangle] (1) 1/0 - 1/1\n")
+        self.assertEqual(str(self.rectangle1), "[Rectangle] (1) 1/0 - 1/1")
+        self.assertEqual(self.rectangle1.width, 1)
+        self.assertEqual(self.rectangle1.width, 1)
+        self.assertEqual(self.rectangle1.height, 1)
+        self.assertEqual(self.rectangle1.x, 1)
+        self.assertEqual(self.rectangle1.y, 0)
+        self.assertEqual(self.rectangle1.id, 1)
 
 
 if __name__ == "__main__":
