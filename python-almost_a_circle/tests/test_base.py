@@ -19,8 +19,14 @@ class TestBase(unittest.TestCase):
         self.assertEqual(shape2.id, 2)
         shape3 = Base(-19)
         self.assertEqual(shape3.id, -19)
-        shape4 = Base("a string")
-        self.assertEqual(shape4.id, "a string")
+        shape4 = Base(None)
+        self.assertEqual(shape4.id, 3)
+        shape5 = Base("a string")
+        self.assertEqual(shape5.id, "a string")
+        shape6 = Base(1.2)
+        self.assertEqual(shape6.id, 1.2)
+        shape7 = Base(True)
+        self.assertEqual(shape7.id, True)
 
     def test_to_json_string(self):
         """Test for to_json_string() method"""
