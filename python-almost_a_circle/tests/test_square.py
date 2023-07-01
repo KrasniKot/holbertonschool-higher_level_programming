@@ -7,6 +7,14 @@ from models.square import Square
 class TestSquare(unittest.TestCase):
     """Square tests"""
 
+    def test_init(self):
+        """Tests for the correct values of attributes"""
+        square = Square(10, 1, 2, 3)
+        self.assertEqual(square.id, 3)
+        self.assertEqual(square.y, 2)
+        self.assertEqual(square.x, 1)
+        self.assertEqual(square.size, 10)
+
     def test_print(self):
         """tests __str__()"""
         square = Square(2, 3, 1, 4)
