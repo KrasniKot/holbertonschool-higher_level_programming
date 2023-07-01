@@ -3,10 +3,8 @@
 import json
 import os
 
-
 class Base:
-    """
-    Defines a Base"""
+    """Defines a Base"""
     __nb_objects = 0
 
     def __init__(self, id=None):
