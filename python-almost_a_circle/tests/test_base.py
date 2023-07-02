@@ -27,6 +27,10 @@ class TestBase(unittest.TestCase):
         self.assertEqual(shape6.id, 1.2)
         shape7 = Base(True)
         self.assertEqual(shape7.id, True)
+        shape8 = Base(float("inf"))
+        self.assertEqual(shape8.id is float("inf"), False)
+        shape9 = Base(float("nan"))
+        self.assertEqual(shape9.id is float("nan"), False)
 
     def test_to_json_string(self):
         """Test for to_json_string() method"""
