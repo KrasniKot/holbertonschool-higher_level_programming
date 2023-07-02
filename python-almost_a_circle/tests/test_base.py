@@ -41,7 +41,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(Base.to_json_string([]), "[]")
         self.assertEqual(Base.to_json_string([True]), "[true]")
         self.assertEqual(Base.to_json_string([False]), "[false]")
-        
+
         dicty = Rectangle(9, 4, 1, 7).to_dictionary()
         dictyson = Base.to_json_string([dicty])
         self.assertTrue(type(dictyson), dict)
