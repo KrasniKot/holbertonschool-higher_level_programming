@@ -31,6 +31,8 @@ class TestBase(unittest.TestCase):
         self.assertEqual(shape8.id is float("inf"), False)
         shape9 = Base(float("nan"))
         self.assertEqual(shape9.id is float("nan"), False)
+        with self.assertRaises(NameError):
+            shape = Base(x)
 
     def test_to_json_string(self):
         """Test for to_json_string() method"""
@@ -39,6 +41,11 @@ class TestBase(unittest.TestCase):
         self.assertEqual(Base.to_json_string([]), "[]")
         self.assertEqual(Base.to_json_string([True]), "[true]")
         self.assertEqual(Base.to_json_string([False]), "[false]")
+        
+        dicty = Rectangle(9, 4, 1, 7).to_dictionary()
+        dictyson = Base.to_json_string([dicty])
+        self.assertTrue(type(dictyson), dict)
+        self.assertTrue(type(dictyson) is str)
 
     def test_save_and_load(self):
         """Test for save to file"""
