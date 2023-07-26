@@ -1,6 +1,0 @@
-#!/bin/bash
-rm -r __pycache* main* .*.swp
-git add .
-read var
-git commit -m "$var"
-git push
