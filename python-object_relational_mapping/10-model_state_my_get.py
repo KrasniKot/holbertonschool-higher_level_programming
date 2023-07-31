@@ -28,4 +28,5 @@ if __name__ == "__main__":
         print(obj.id)
     else:
         print("Not found")
-    
+
+   session.close() 
