@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-
+Changes the name of a State object from the database hbtn_0e_6_usa
 """
 
 from sys import argv
@@ -20,4 +20,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     db = Session()
-
+    obj = db.query(State).filter_by(id=2).first()
+    obj.name = "New Mexico"
+    db.commit()
+    db.close()
