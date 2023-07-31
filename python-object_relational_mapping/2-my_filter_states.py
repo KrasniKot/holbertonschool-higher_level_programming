@@ -15,4 +15,5 @@ if __name__ == "__main__":
                 ORDER BY states.id ASC".format(argv[4]))
         datable = db.fetchall()
         for row in datable:
-            print(row)
+            if row[1] == argv[4]:
+                print(row)
