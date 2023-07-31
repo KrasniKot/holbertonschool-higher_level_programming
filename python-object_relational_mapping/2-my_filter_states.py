@@ -12,7 +12,7 @@ if __name__ == "__main__":
                          db=argv[3], port=3306, charset="utf8") as db:
         db = db.cursor()
         db.execute("SELECT * FROM states WHERE name LIKE '{}'\
-                ORDER BY states.id ASC".format(argv[4])
+                ORDER BY states.id ASC".format(argv[4]))
         datable = db.fetchall()
         for row in datable:
             print(row)

@@ -16,4 +16,5 @@ if __name__ == "__main__":
         datable = db.fetchall()
 
         for row in datable:
-            print(row)
+            if row[1][0] == "N":
+                print(row)
