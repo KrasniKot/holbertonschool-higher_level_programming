@@ -20,7 +20,7 @@ if __name__ == "__main__":
     fob = session.query(State).first()
 
     if fob:
-        print("{}: {}".format(firts_object.id, firts_object.name))
+        print("{}: {}".format(fob.id, fob.name))
     else:
         print("Nothing")
 
