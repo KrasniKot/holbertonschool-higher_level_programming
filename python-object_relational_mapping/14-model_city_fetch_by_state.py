@@ -20,6 +20,6 @@ if __name__ == "__main__":
 
     for obj in db.query(State.name, City.id, City.name).filter(
             City.state_id == State.id).order_by(City.id):
-        print("{}: ({}) {}".format(obj[1], obj[2], obj[3]))
+        print("{}: ({}) {}".format(obj[0], obj[1], obj[2]))
 
     db.close()
