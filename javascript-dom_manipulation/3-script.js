@@ -1,4 +1,8 @@
-document.querySelector("#toggle_header").onclick = function() {
+document.querySelector("#toggle_header").onclick = function (){
 	para = document.querySelector("header");
-	para.classList.toggle("red");
+	if (para.classList.contains("red")) {
+	para.classList.replace("red", "green");
+	} else {
+	para.classList.replace("green", "red");
+	}
 };
