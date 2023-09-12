@@ -16,10 +16,12 @@ Write a JavaScript script that updates the text color of the `header` element to
 ### Task 1: Click and turn red
 Write a JavaScript script that updates the text color of the `header` element to red (`#FF0000`) when the user clicks on the tag with id `red_header`:
 
-### Task 2:
-### Task 3:
-### Task 4:
-### Task 5:
-### Task 6:
-### Task 7:
-### Task 8:
+### Task 2: Add \`.red\` class
+Write a JavaScript script that adds the class `red` to the `header` element when the user clicks on the tag with id `red_header`
+
+### Task 3: Toggle classes
+### Task 4: List of elements
+### Task 5: Change the text
+### Task 6: Star wars character
+### Task 7: Star Wars movies
+### Task 8: Say Hello!
