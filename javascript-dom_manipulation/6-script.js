@@ -4,7 +4,6 @@ async function gC() {
 
 	let nodep = document.createElement("p");
 	nodep.appendChild(document.createTextNode(character.name));
-	window.alert(character.name);
 	document.querySelector("#character").appendChild(nodep);
 };
 
