@@ -1,7 +1,7 @@
 $('#toggle_header').click(function () {
-  if ($('header .green')) {
-    $('header').replaceClass('green', 'red');
+  if ($('header').hasClass('green')) {
+    $('header').removeClass('green').addClass('red');
   } else {
-    $('header').replaceClass('red', 'green');
+    $('header').removeClass('red').addClass('green');
   }
 });
